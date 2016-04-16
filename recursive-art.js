@@ -14,7 +14,6 @@ var drawShape = function(x, y, width, height) {
     var new_height = height / 1.08;
     if (new_width >= 2) {
         drawShape(x, y, new_width, new_height);
-        drawShape(x, y, new_height, new_width);
     }
 };
 
