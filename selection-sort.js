@@ -1,9 +1,11 @@
+// 数组firstIndex和secondIndex对应序号的值互换
 var swap = function(array, firstIndex, secondIndex) {
     var temp = array[firstIndex];
     array[firstIndex] = array[secondIndex];
     array[secondIndex] = temp;
 };
 
+// 返回数组中以startIndex序号起始的子数组的最小值的序号
 var indexOfMinimum = function(array, startIndex) {
 
     var minValue = array[startIndex];
@@ -18,6 +20,11 @@ var indexOfMinimum = function(array, startIndex) {
     return minIndex;
 };
 
+/*
+* 选择排序：
+* 1. 从序号0开始，查找其他的子数组的最小值的序号，并和序号0的值交换。
+* 2. 序号0不断加1，直到序号达到整个数组的长度length - 1
+*/
 var selectionSort = function(array) {
     var firstIndex = 0;
     for (var i = firstIndex; i < array.length; i++) {
