@@ -16,6 +16,10 @@ var power = function(x, n) {
     if (n < 0) {
         return 1 / power(x, -n);   
     }
+    /*
+     * 这里区分奇数、偶数的目的为了减少递归的次数，因为偶次幂x**n = (x ** n/2) * (x ** n/2)
+     */
+
     // recursive case: n is odd
     if (isOdd(n)) {
         return x * power(x, n - 1);
