@@ -31,6 +31,7 @@ var doBFS = function(graph, source) {
     bfsInfo[source].distance = 0;
 
     var queue = new Queue();
+    // 这里的source表示顶点
     queue.enqueue(source);
 
     // Traverse the graph
