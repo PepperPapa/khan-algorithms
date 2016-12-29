@@ -1,3 +1,7 @@
+/*
+ * quick sort reference: qsort_recursion.png
+ */
+
 // Swaps two items in an array, changing the original array
 var swap = function(array, firstIndex, secondIndex) {
     var temp = array[firstIndex];

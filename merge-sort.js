@@ -7,9 +7,11 @@ var merge = function(array, p, q, r) {
     var k = p;
     var i;
     var j;
+    // 复制array[p..q]到lowHalf
     for (i = 0; k <= q; i++, k++) {
         lowHalf[i] = array[k];
     }
+    // 复制array[q+1..r]到highHalf, 初始k = q + 1
     for (j = 0; k <= r; j++, k++) {
         highHalf[j] = array[k];
     }
@@ -60,9 +62,9 @@ var mergeSort = function(array, p, r) {
 };
 
 var array = [14, 7, 3, 12, 9, 11, 6, 2];
-mergeSort(array, 0, array.length-1);
+mergeSort(array, 0, array.length - 1);
 console.log("Array after sorting: " + array);
 
 var array1 = [-14, 7, 3, 12, 9, 11, -6, 2, 0, 800];
-mergeSort(array1, 0, array1.length-1);
+mergeSort(array1, 0, array1.length - 1);
 console.log("Array after sorting: " + array1);
